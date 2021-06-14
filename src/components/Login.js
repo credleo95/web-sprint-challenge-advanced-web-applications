@@ -25,7 +25,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   axios.post('http://localhost:5000/api/login',loginInput)
   .then(res => {localStorage.setItem('token',res.data.payload) 
-
+  history.push('/bubblepage')
 })
   .catch(err =>  { console.log("error handleSubmit; Login.js: ", err)})
 }
