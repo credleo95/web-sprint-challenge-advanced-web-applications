@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route,Link } from "react-router-dom";
-// import BubblePage from "./components/BubblePage"; 
+import BubblePage from "./components/BubblePage"; 
 import Login from "./components/Login";
 import PrivateRoute from './components/PrivateRoute';
 import "./styles.scss";
@@ -21,7 +21,7 @@ function App() {
 
         <Route exact path="/" component={Login} />
         </div>
-        {/* <PrivateRoute exact path="/bubblepage" component={BubblePage}/> */}
+        <PrivateRoute exact path="/bubblepage" component={BubblePage}/>
     </Router>
   );
 }
